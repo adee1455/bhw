@@ -5,7 +5,7 @@
 import { wagmiAdapter, projectId } from '@/config'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { createAppKit } from '@reown/appkit/react' 
-import { mainnet, base} from '@reown/appkit/networks'
+import { base} from '@reown/appkit/networks'
 import React, { type ReactNode } from 'react'
 import { cookieToInitialState, WagmiProvider, type Config } from 'wagmi'
 
@@ -19,7 +19,7 @@ if (!projectId) {
 // Set up metadata
 const metadata = {
   name: 'BHW',
-  description: 'AppKit Example',
+  description: 'Blockchain Health Wallet',
   url: 'https://reown.com/appkit', // origin must match your domain & subdomain
   icons: ['https://assets.reown.com/reown-profile-pic.png']
 }
@@ -27,8 +27,12 @@ const metadata = {
 // Create the modal
 const modal = createAppKit({
   adapters: [wagmiAdapter],
+  // themeMode: 'light',
+  themeVariables: {
+   
+  },
   projectId,
-  networks: [mainnet, base],
+  networks: [base],
   defaultNetwork: base,
   metadata: metadata,
   features: {
@@ -45,6 +49,5 @@ function ContextProvider({ children, cookies }: { children: ReactNode; cookies: 
     </WagmiProvider>
   )
 }
-
 export default ContextProvider
     
