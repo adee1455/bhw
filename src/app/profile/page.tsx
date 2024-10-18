@@ -2,6 +2,12 @@
 
 import React, { useState } from 'react'
 import Navbar from '@/components/Navbar'
+import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
+import { useDisconnect } from 'wagmi'
+
+
+
 
 type FormData = {
   name: string
@@ -24,6 +30,8 @@ const initialFormData: FormData = {
 const bloodGroups = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-']
 
 export default function OnboardingWizard() {
+  const { disconnect } = useDisconnect()
+  const router = useRouter();
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState<FormData>(initialFormData)
 
@@ -39,11 +47,15 @@ export default function OnboardingWizard() {
     if (step > 1) setStep((prev) => prev - 1)
   }
 
+
   const handleSubmit = () => {
     console.log('Form submitted:', formData)
     alert('Onboarding complete! Check console for form data.')
+    router.push('/home');
+    disconnect()
   }
 
+  
   const renderStep = () => {
     switch (step) {
       case 1:

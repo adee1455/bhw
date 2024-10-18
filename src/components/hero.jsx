@@ -2,10 +2,12 @@
 import Image from 'next/image'
 import React from 'react'
 import { useRouter } from 'next/navigation';
-
+import { useAppKitAccount } from '@reown/appkit/react';
 
 export default function Hero() {
+  const conn = useAppKitAccount().address; // Get the connected wallet address
     const router = useRouter();
+    
   return (
     <div className=' sm:mt-32 mt-20 mb-6'>
       <div className='flex sm:flex-row flex-col'>
@@ -22,6 +24,11 @@ export default function Hero() {
                 <h2 className='font-extrabold text-blue-600 sm:text-5xl text-4xl sm:leading-tight sm:tracking-normal items-center'>Blockchain Health <br/> Wallet</h2>
                 <p className='pt-5 font-semibold font-mono text-sm '>Secure, Share, and Manage Your Health Records Seamlessly</p>
                 <div className='flex pt-6 justify-center'>
+                {conn !== undefined ? (
+                  <button onClick={() => router.push('/home')} className='bg-blue-500 text-white rounded-2xl m-0 px-5 py-2 mr-4'>
+                      Go to Dashboard
+                  </button>
+                ) : null} 
                 <div className='bg-blue-500 text-white rounded-2xl m-0 p-0'>
                     <w3m-button balance='hide'/>
                 </div>
