@@ -9,8 +9,9 @@ export default function HealthDashboard() {
         <Navbar/>
     </div>
     <div className="min-h-screen bg-white">
-    <div className='flex justify-between m-2'>
-        <div className="bg-white p-6 rounded-lg shadow">
+    <div className='flex flex-col sm:flex-row justify-between m-2'>
+        <div className='flex sm:flex-row flex-col-reverse'>
+        <div className="bg-white p-6 m-3 rounded-lg shadow">
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <div className="space-y-2">
               <button className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-200">
@@ -24,7 +25,8 @@ export default function HealthDashboard() {
          <div>
             <UserCard/>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow">
+        </div>
+        <div className="bg-white p-6 m-3 rounded-lg shadow">
             <h3 className="text-lg font-semibold mb-4">Health Records Overview</h3>
             <p className="text-sm text-gray-600 mb-2">Last Uploaded: Blood Test Results - 12th Oct</p>
             <a href="#" className="text-blue-600 hover:underline text-sm">View all records →</a>

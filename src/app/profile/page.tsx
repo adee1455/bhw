@@ -50,8 +50,8 @@ export default function OnboardingWizard() {
 
   const handleSubmit = () => {
     console.log('Form submitted:', formData)
-    alert('Onboarding complete! Check console for form data.')
     router.push('/home');
+    alert('Onboarding complete! Check console for form data.');
     disconnect()
   }
 
@@ -75,7 +75,7 @@ export default function OnboardingWizard() {
     <div>
       <Navbar/>
     <div className='profiles'>
-    <div className="card">
+    <div className="card  sm:w-[500px] w-[22rem]">
       <div className="card-header">
         <h2 className="card-title">Profile Setup</h2>
         <div className="progress-bar">
@@ -111,7 +111,7 @@ export default function OnboardingWizard() {
           margin: 0; // Reset margin
       }
         .card {
-          width: 400px;
+        
           border: 1px solid #e0e0e0;
           border-radius: 8px;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
