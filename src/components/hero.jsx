@@ -21,7 +21,7 @@ export default function Hero() {
                         </span>
             </button>
             </div>
-                <h2 className='font-extrabold text-blue-600 sm:text-5xl text-4xl sm:leading-tight sm:tracking-normal items-center'>Blockchain Health <br/> Wallet</h2>
+                <h2 className='font-extrabold text-blue-600 sm:text-5xl text-4xl sm:leading-tight sm:tracking-normal items-center'>Medivault: The Blockchain Health <br/> Wallet</h2>
                 <p className='pt-5 font-semibold font-mono text-sm '>Secure, Share, and Manage Your Health Records Seamlessly</p>
                 <div className='flex pt-6 justify-center'>
                 <div className='bg-blue-500 text-white rounded-2xl m-0 p-0'>

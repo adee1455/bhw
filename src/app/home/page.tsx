@@ -10,7 +10,7 @@ export default function HealthDashboard() {
     </div>
     <div className="min-h-screen bg-white">
     <div className='flex flex-col sm:flex-row justify-between m-2'>
-        <div className='flex sm:flex-row flex-col-reverse'>
+        <div className='flex sm:flex-row lg:flex-row flex-col-reverse'>
         <div className="bg-white p-6 m-3 rounded-lg shadow">
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <div className="space-y-2">
