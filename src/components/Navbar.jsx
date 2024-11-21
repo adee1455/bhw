@@ -17,7 +17,7 @@ if(conn !== undefined) {
   <div className ="max-w-screen-xl flex flex-wrap items-center dark:text-blue-600 text-blue-600  justify-between mx-auto p-4">
   <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
       {/* <img src="/logo2.png" class="sm:h-12 h-10" alt=" Logo"/> */}
-      <span className="self-center font-mono md:text-3xl text-2xl  sm:font-semibold font-bold whitespace-nowrap ">Medivault</span>
+      <span className="self-center font-mono md:text-3xl text-2xl  sm:font-semibold font-bold whitespace-nowrap ">BHW</span>
   </a>
   <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse items-center">
   <div className='bg-blue-500 text-white rounded-2xl p-0 '>
